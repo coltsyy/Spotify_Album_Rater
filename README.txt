@@ -1,10 +1,13 @@
-Ello
+INFO
+    this is a flask and python webapp 
 
-Heres some info lad
+SETUP 
 
-to run setup use : 
     python3 setup.py install --user
 
-    or
-
     python3 setup.py install abc
+
+RUN
+    py app.py
+
+TEST
