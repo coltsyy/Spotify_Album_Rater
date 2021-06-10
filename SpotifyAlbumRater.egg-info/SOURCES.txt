@@ -1,4 +1,5 @@
 LICENSE
+README.txt
 setup.py
 SpotifyAlbumRater.egg-info/PKG-INFO
 SpotifyAlbumRater.egg-info/SOURCES.txt
