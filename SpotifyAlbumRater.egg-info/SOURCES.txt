@@ -1,8 +1,0 @@
-LICENSE
-README.txt
-setup.py
-SpotifyAlbumRater.egg-info/PKG-INFO
-SpotifyAlbumRater.egg-info/SOURCES.txt
-SpotifyAlbumRater.egg-info/dependency_links.txt
-SpotifyAlbumRater.egg-info/requires.txt
-SpotifyAlbumRater.egg-info/top_level.txt
