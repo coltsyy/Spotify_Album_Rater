@@ -22,31 +22,5 @@ def before_request():
         g.user = None
 '''
 # This would make everything look cleaner like you had mentioned
-'''
 
-@app.route('/')
-def home():
-    return render_template("index.html")
-
-@app.route('login')
-def login():
-    return render_template("login.html")
-
-@app.route('your_ratings')
-def your_ratings():
-    return render_template("your_ratings.html")
-
-@app.route('friends_ratings')
-def friends_ratings():
-    return render_template("friends_ratings.html")
-    
-@app.route('settings')
-def settings():
-    return render_template("settings.html")
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
-
-'''
 
