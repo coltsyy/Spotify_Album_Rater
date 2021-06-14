@@ -2,6 +2,11 @@
     %}
     <form method="POST">
       <h3 align="center">Login</h3>
+
+      <div class="form-group" align="center">
+        <p for="email">Dont have an account yet? <a class="nav-link" href="{{ url_for('signup_bp.sign_up') }}"> Sign Up Here</a></p>
+      </div>
+
       <div class="form-group">
         <label for="email">Email Address</label>
         <input

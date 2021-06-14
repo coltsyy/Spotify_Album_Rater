@@ -7,9 +7,6 @@ from flask_mysqldb import MySQL
 import json
 import ast
 
-
-print(app.config['MYSQL_USER'])
-
 mysql = MySQL(app)
 
 # Blueprint Configuration
@@ -30,6 +27,8 @@ def login():
 
         account = mycursor.fetchone()
 
+        print(account)
+
         if account:
             # Create session data, we can access this data in other routes
             session['loggedin'] = True
@@ -40,6 +39,7 @@ def login():
             return redirect(url_for('home_bp.home') )
         else:
             flash('Incorrect email or password, try again.', category='error')
+            return redirect(url_for('login_bp.login') )
 
 
 
