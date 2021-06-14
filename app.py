@@ -1,8 +1,11 @@
 from flask import Flask, redirect, url_for, render_template
+from flask_mysqldb import MySQL
 from dotenv import load_dotenv
 
 
 app = Flask(__name__)
+
+mysql = MySQL(app)
 
 """Application entry point."""
 from spotify_application import init_app

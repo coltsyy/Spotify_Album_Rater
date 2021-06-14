@@ -12,6 +12,9 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto">
+                  {% if 'id' in session %}
+         
+          
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ url_for('home_bp.home') }}">Home</a>
                   </li>
@@ -24,6 +27,20 @@
                   <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('profile_bp.main') }}">Profile</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('logout_bp.logout') }}">logout</a>
+                  </li>
+
+                  {% else %}
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('signup_bp.sign_up') }}">Sign Up</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('login_bp.login') }}">Login</a>
+                  </li>
+
+                  {% endif %}
                 </ul>
               </div>
             </div>

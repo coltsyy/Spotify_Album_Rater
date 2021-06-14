@@ -1,5 +1,5 @@
 """General page routes."""
-from flask import Blueprint
+from flask import Blueprint, session, redirect, url_for
 from flask import current_app as app
 from flask import render_template
 
@@ -13,20 +13,15 @@ home_bp = Blueprint(
 @home_bp.route("/", methods=["GET"])
 def home():
     """Homepage."""
-    return render_template(
-        "index.html",
-        title="Flask Blueprint Demo",
-        subtitle="Demonstration of Flask blueprints in action.",
-        template="home-template"
-    )
 
+    if 'id' not in session:
+        return redirect(url_for('login_bp.login'))
 
-@home_bp.route("/login", methods=["GET"])
-def login():
-    """login."""
-    return render_template(
-        "login.html",
-        title="Flask Blueprint Demo",
-        subtitle="Demonstration of Flask blueprints in action.",
-        template="home-template"
-    )
+    else:
+        return render_template(
+            "index.html",
+            title="Flask Blueprint Demo",
+            subtitle="Demonstration of Flask blueprints in action.",
+            template="home-template"
+        )
+
