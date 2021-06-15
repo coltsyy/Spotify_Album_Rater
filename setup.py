@@ -16,7 +16,7 @@ setup(
     version='1.0',
     description='Application for rating spotify songs',
     author='James Sommerville ,Ethan Coulter',
-    author_email='Jsommerville99@gmail.com',
+    author_email='Jsommerville99@gmail.com coltsyy@gmail.com',
     packages=find_packages(),
     include_package_data=True,
     install_requires=requires
